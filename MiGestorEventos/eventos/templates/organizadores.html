@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/organizadores.css' %}">
+    <title>Organizadores</title>
+</head>
+<body>
+
+    {% include 'header.html' %}
+
+    <div class="organizadores">
+        <ul class="organizadores-list">
+            {% for organizador in organizadores %}
+
+            <li class="organizador">
+                <div class="contenedor-org">
+                    <div class="encabezado">
+                        <strong>Nombre: {{ organizador.nombre }}</strong>
+                        <div>
+                            <p>Correo: {{ organizador.email }}</p>
+                        </div>
+                    </div>
+
+                    <aside class="data-extra">
+                        <div>
+                            <img src="{% static 'img/mobile.png' %}" alt="">
+                            <p>{{ organizador.telefono }}</p>
+                        </div>
+
+                        <div>
+                            <img src="{% static 'img/maps-5g.png' %}" alt="">
+                            <p>{{ organizador.direccion }}</p>
+                        </div>
+
+                    </aside>
+                </div>
+            </li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <div class="contenedor-btn-org">
+        <a href="{% url 'organizador-create' %}" class="agregar-org">Agregar nuevo</a>
+    </div>
+    
+</body>
+</html>

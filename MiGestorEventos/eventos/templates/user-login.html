@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <title>Inicia Sesion</title>
+</head>
+<body>
+
+
+{% block content %}
+
+{% if page == 'login' %}
+
+<div class="contiene">
+
+    <div class="panel-completo">
+
+        <a class="close-buttonv" href="{% url 'index' %}">x</a>
+        
+        <div class="top-bento">
+
+            <div class="contenedor-img">
+                <img src="{% static 'img/3094352.jpg' %}" alt="oficinista" class="oficinista">
+            </div>
+
+            <div class="contenedor-login">
+
+                <div class="content-login">
+
+                    <h2>Iniciar Sesión</h2>
+                
+                    <form action="" method="post" class="form-login" id="register-form">
+
+                        <div class="elementos">
+
+                            {% csrf_token %}
+                    
+                            <label for="usuario">Usuario</label>
+                            <input type="text" id="usuario" name="usuario" placeholder="Usuario">
+
+                            <label for="pass">Contraseña</label>
+                            <input type="password" id="pass" name="pass" placeholder="Contraseña">
+                    
+                            <button type="submit" name="login">Iniciar Sesión</button>
+
+                        </div>
+
+                    </form>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', (event) => {
+                            document.querySelector('#usuario').focus();
+                        });
+                    </script>
+
+                    <div class="error-login">
+                        {% if error_message %}
+                            <p>{{ error_message }}</p>
+                        {% endif %}
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+{% endif %}
+
+{% endblock content %}
+
+
+</body>
+
+</html>

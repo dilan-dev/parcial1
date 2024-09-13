@@ -1,0 +1,52 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+    <title>Mi parcial #1</title>
+</head>
+<body>
+
+
+    <!-- header de mi parcial 1 -->
+
+
+    {% include 'header.html' %}
+
+    <!-- Relleno de index para mi parcial 1 -->
+
+    <div class="relleno">
+        <p class="mensaje-relleno">
+            ¡Bienvenido a nuestro proyecto de eventos y organizadores! Este proyecto está realizado con el fin de aprender
+            conceptos clave de desarrollo web utilizando Django. Durante el curso de este proyecto, se explorarán conceptos como 
+            el manejo de rutas, implementación de un sistema de login, creación de vistas y mucho más. 
+        </p>
+    </div>
+
+
+    <!-- Imágenes de inicio -->
+
+    <div class="contenedor-imagenes">
+        <div class="imagenes">
+
+            <aside class="item-img item-1">
+                <img src="{% static 'img/django.png' %}" alt="Logo Django">
+                <h3>Framework</h3>
+            </aside>
+
+            <aside class="item-img item-2">
+                <img src="{% static 'img/user.png' %}" alt="Logo User">
+                <h3>Autenticación</h3>
+            </aside>
+
+            <aside class="item-img item-3">
+                <img src="{% static 'img/layout.png' %}" alt="Logo Layout">
+                <h3>Template</h3>
+            </aside>
+
+        </div>
+    </div>
+</body>
+</html>

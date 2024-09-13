@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/edit-event.css' %}">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="contenedor-form">
+
+        <div class="edit-panel">
+            <a href="{% url 'ver_eventos' %}" class="cierra">X</a>
+            <h2>Editar Evento</h2>
+            <form method="post" action="{% url 'editar_evento' evento.id %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+
+                <div class="crear-event">
+                    <button type="submit" class="crear-eventooo">Guardar Cambios</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
+

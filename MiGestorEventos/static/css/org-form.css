@@ -1,0 +1,100 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+}
+
+.form-control{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 5px;
+    margin: 5px 0 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.tarjeta-login{
+    border: 2px solid #333333;
+    max-width: 800px;
+    margin: 20px auto 50px auto;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #141414;
+}
+
+.right img{
+    height: 300px;
+    width: 300px;
+    opacity: 0.9;
+    border-radius: 10px;
+}
+
+.down{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    color: white;
+}
+
+.cerrar{
+    margin-left: auto;
+    cursor: pointer;
+    font-size: 20px;
+    
+}
+
+.cerrar a{
+    text-decoration: none;
+    color: #cc3364;
+}
+
+.cerrar a:hover{
+    color: #f24079 ;
+}
+
+.titulol{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #adadad;
+}
+
+.barra{
+    border-right: 2px solid #525252;
+    height: 500px;
+}
+
+.contenedor-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.boton-org{
+    border: none;
+    background-color: #35a276;
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 18px;
+}
+
+.boton-org:hover{
+    background-color: #22ab74;
+}

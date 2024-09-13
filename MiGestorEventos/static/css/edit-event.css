@@ -1,0 +1,119 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: rgb(7, 7, 7);
+}
+
+.contenedor-form{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    max-width: 500px;
+    margin: 20px auto 50px auto;
+    padding: 20px 20px 20px 20px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.crear-event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.crear-eventooo{
+    padding: 8px;
+    background-color: #003d66;
+    color: white;
+    font-size: 18px;
+    border-radius: 9px;
+    border: none;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.crear-eventooo:hover{
+    background-color: #005c99;
+}
+
+.contenedor-form form{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    margin: 5px 0 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.contenedor-form form input{
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+    height: 25px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+
+.contenedor-form form textarea{
+    border: 1px solid #0e0e0e;
+    border-radius: 5px;
+    height: 50px;
+    width: 190px;
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.contenedor-form select{
+    margin-left: 10px;
+    height: 25px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.contenedor-form p{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.edit-panel{
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: #001f33;
+    border-radius: 15px;
+    color: white;
+}
+
+
+.cierra{
+    text-decoration: none;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color:rgb(232, 75, 75) ;
+    font-size: 20px;
+}
+
+.cierra:hover{
+    color:rgb(194, 51, 51) ;
+}
+
+
+.edit-panel h2{
+    padding-top: 20px;
+}
+
+

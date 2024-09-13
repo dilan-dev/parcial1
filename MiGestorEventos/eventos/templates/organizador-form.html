@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/org-form.css' %}">
+    <title>Crear Organizador</title>
+</head>
+<body>
+
+    <h2 class="titulol">Agrega organizadores</h2>
+    <div class="tarjeta-login">
+
+        <div class="cerrar">
+            <a href="{% url 'organizador-list' %}">X</a>
+        </div>
+
+        <div class="down">
+
+            <div class="right">
+                <img src="{% static 'img/3094352.jpg' %}" alt="">
+            </div>
+
+            <div class="barra"></div>
+
+            <div class="contenedor-form">
+
+                <form action="">
+
+                    {% csrf_token %}
+
+                    {{ form.as_p }}
+
+                    <div class="contenedor-btn">
+                        <button type="submit" class="boton-org">Guardar</button>
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/eventos.css' %}">
+    <title>Lista de Eventos</title>
+</head>
+<body>
+
+    <!-- Incluir header a template de eventos -->
+    {% include 'header.html' %}
+
+    <div class="titulo-eventos">
+        <h2 class="titulo-eventos-et">Eventos</h2>
+    </div>
+
+    {% if eventos %}
+        <div class="contenedor-eventos">
+            <ul class="fondo-evento">
+                {% for evento in eventos %}
+                    <li class="evento-item">
+                        <div class="encabezado-evento">
+                            <h2>{{ evento.titulo }}</h2>
+                            <div class="organizadoor">por {{ evento.organizador }}</div>
+                        </div>
+                        <hr>
+                        <div class="cuerpo-evento">
+                            <p>{{ evento.descripcion }}</p>
+                            <strong>Fecha: {{ evento.fecha }}</strong>
+                        </div>
+                        <div class="final-evento">
+                            <p>Lugar: {{ evento.lugar }}</p>
+                            <div class="estado-evento">
+                                <strong>Estado:</strong>
+                                <p class="{% if evento.estado == 'activo' %}estado-activo{% elif evento.estado == 'finalizado' %}estado-finalizado{% elif evento.estado == 'cancelado' %}estado-cancelado{% endif %}">
+                                     {{ evento.estado }}
+                                </p>
+                            </div>
+                            <a href="{% url 'editar_evento' evento.id %}" class="btn-editar">
+                                <img src="{% static 'img/draw.png' %}" alt="Edit boton">
+                            </a>
+                        </div>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% else %}
+        <div>
+            <p>No hay eventos disponibles.</p>
+        </div>
+
+    {% endif %}
+
+    <div class="crear-evento">
+        <a class="crear-evento-boton" href="{% url 'crear_evento' %}">Crear Evento</a>
+    </div>
+
+
+</body>
+</html>

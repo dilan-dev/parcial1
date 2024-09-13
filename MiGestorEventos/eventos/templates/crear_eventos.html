@@ -1,0 +1,31 @@
+{% load static %}
+<!-- crear_eventos.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Crear Evento</title>
+    <link rel="stylesheet" href="{% static 'css/crear_eventos.css' %}">
+</head>
+<body>
+
+    <!-- incluir header -->
+    {% include 'header.html' %}
+
+    <div class="titulo">
+        <h2>Crear Evento</h2>
+    </div>
+
+    <!-- Formulario de creación de evento -->
+     <div class="contenedor-form">
+        <form method="post" action="{% url 'crear_evento' %}" >
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div class="crear-eventoo">
+                <button type="submit" class="crear-eventooo">Crear Evento</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

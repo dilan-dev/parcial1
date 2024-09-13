@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0a0a0a;
+}
+
+.titulo-eventos-et{
+    font-size: 35px;
+    color: #808080;
+    margin: auto;
+}
+
+.titulo-eventos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px auto 40px auto;
+}
+
+.contenedor-eventos{
+    border: 2px solid #333333;
+    max-width: 1100px;
+    margin: 20px auto 50px auto;
+    padding: 20px 20px 0px 20px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.fondo-evento{
+    list-style: none;
+    width:auto;
+    padding: 0;
+    margin: 0;
+}
+
+
+.encabezado-evento{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.encabezado-evento h2{
+    margin: 0;
+}
+
+.encabezado-evento .organizadoor{
+    margin-left: auto;
+}
+
+.evento-item{
+    background-color: #141414;
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: rgba(56, 27, 243, 0.45) 0px 25px 20px -20px;
+}
+
+.cuerpo-evento{
+    margin-bottom: 10px;
+}
+
+.final-evento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #292929;
+    padding: 0 10px 0 10px;
+    border-radius: 0 0 8px 8px;
+}
+
+.cuerpo-evento p{
+    margin-bottom: 20px;
+}
+
+ul{
+    color: white;
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #5143e8, #3aa8a4);
+}
+
+.estado-activo {
+    color: #22ab74;
+}
+
+.estado-finalizado {
+    color: #0000ff;
+}
+
+.estado-cancelado {
+    color: #c84153;
+}
+
+.estado-evento{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.estado-evento p{
+    margin-left: 5px;
+}
+
+.crear-evento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.crear-evento-boton{
+    text-decoration: none;
+    background-color: #1d915d;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.crear-evento-boton:hover{
+    background-color: #146746;
+}
+
+.btn-editar img{
+    height: 30px;
+    width: 30px;
+}

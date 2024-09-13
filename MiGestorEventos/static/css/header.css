@@ -1,0 +1,76 @@
+header{
+    max-width: 1100px;
+    margin: 20px auto;
+    background-color: #141414;
+    padding: 10px 20px;
+    border-radius: 8px;
+    height: auto;
+}
+
+.contenedor-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+}
+
+.logo-titulo{
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-titulo h4{
+    padding-left: 5px;
+}
+
+.logo-titulo img{
+    height: 40px;
+    width: 40px;
+}
+
+
+.central-elementos a{
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-size: 15px;
+}
+
+.central-elementos a:hover{
+    color: #0099ff;
+    font-size: 16px;
+}
+
+.btn{
+    border: none;
+    border-radius: 10px;
+    background-color: #1f1f1f;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: #0099ff;
+}
+
+.btn a:hover{
+    color: white;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.register-seccion a{
+    text-decoration: none;
+    color: white;
+    margin: 10px 10px;
+    font-size: 15px;
+}

@@ -1,0 +1,28 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/header.css' %}">
+<header>
+    <div class="contenedor-header">
+        <div class="logo-titulo">
+            <img src="{% static 'img/right-sidebar.png' %}" alt="Logo">
+            <h4>Parcial 1</h4>
+        </div>
+
+        <header class="central-elementos">
+            <a href="{% url 'organizador-list' %}">Organizadores</a>
+            <a href="{% url 'ver_eventos' %}">Eventos</a>
+            <a href="{% url 'index' %}">Inicio</a>
+        </header>
+
+        <div class="register-seccion">
+            {% if request.user.is_authenticated %}
+                <button class="btn">
+                    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                </button>
+            {% else %}
+                <button class="btn">
+                    <a href="{% url 'login' %}">Iniciar Sesión</a>
+                </button>
+            {% endif %}
+        </div>
+    </div>
+</header>
